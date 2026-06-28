@@ -21,6 +21,15 @@ const STRIP_IMAGES = [
   { src: cyber6, label: "Personal Assistant", sub: "Smart AI", color: "#5EC900" },
 ];
 
+const LEFT_STRIP_IMAGES = [
+  { src: "https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?w=600&q=80", label: "Humanoid AI", sub: "Robot Vision", color: "#00C8D4" },
+  { src: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80", label: "Cyber Defense", sub: "Neural Guard", color: "#6600FF" },
+  { src: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=600&q=80", label: "Deep Learning", sub: "AI Core", color: "#5EC900" },
+  { src: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80", label: "Synthetic Mind", sub: "AI Research", color: "#EFA758" },
+  { src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80", label: "Quantum Node", sub: "Processing Unit", color: "#00C8D4" },
+  { src: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=600&q=80", label: "Code Genesis", sub: "Dev Interface", color: "#6600FF" },
+];
+
 function ImageStrip({ tilt, duration, delay, width, images }: {
   tilt: number; duration: number; delay: number; width: number; images: typeof STRIP_IMAGES;
 }) {
@@ -299,9 +308,9 @@ export function Hero() {
             WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)",
           }}
         >
-          {/* Strip 1 — tilted right, faster */}
-          <ImageStrip tilt={-8} duration={18} delay={0} width={260} images={STRIP_IMAGES} />
-          {/* Strip 2 — tilted left, slower, offset start */}
+          {/* Strip 1 — left column, new AI robot images */}
+          <ImageStrip tilt={-8} duration={18} delay={0} width={260} images={LEFT_STRIP_IMAGES} />
+          {/* Strip 2 — right column, original cyber images */}
           <ImageStrip tilt={6} duration={24} delay={-10} width={260} images={[...STRIP_IMAGES].reverse()} />
         </motion.div>
       </div>
