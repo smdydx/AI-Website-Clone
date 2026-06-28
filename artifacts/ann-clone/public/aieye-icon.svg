@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <defs>
+    <linearGradient id="eg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8D4"/>
+      <stop offset="100%" stop-color="#6600FF"/>
+    </linearGradient>
+    <radialGradient id="pg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C8D4"/>
+      <stop offset="60%" stop-color="#0066CC"/>
+      <stop offset="100%" stop-color="#6600FF"/>
+    </radialGradient>
+    <filter id="g">
+      <feGaussianBlur stdDeviation="1.5" result="cb"/>
+      <feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="29" fill="#050913" stroke="url(#eg)" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Eye glow -->
+  <ellipse cx="30" cy="30" rx="22" ry="13" fill="#00C8D4" opacity="0.06" filter="url(#g)"/>
+
+  <!-- Eye outline -->
+  <path d="M 8 30 Q 17 13 30 13 Q 43 13 52 30 Q 43 47 30 47 Q 17 47 8 30 Z"
+        fill="none" stroke="url(#eg)" stroke-width="2" filter="url(#g)"/>
+
+  <!-- Iris -->
+  <circle cx="30" cy="30" r="11" fill="none" stroke="url(#eg)" stroke-width="1" opacity="0.6"/>
+
+  <!-- Pupil -->
+  <circle cx="30" cy="30" r="6.5" fill="url(#pg)" filter="url(#g)"/>
+
+  <!-- Shine -->
+  <circle cx="27.5" cy="27.5" r="1.8" fill="white" opacity="0.65"/>
+
+  <!-- Circuit lines -->
+  <path d="M 22 22 L 17 17 L 13 17" stroke="#00C8D4" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="13" cy="17" r="1.2" fill="#00C8D4" opacity="0.9"/>
+  <path d="M 38 22 L 43 17 L 47 17" stroke="#00C8D4" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="47" cy="17" r="1.2" fill="#00C8D4" opacity="0.9"/>
+  <path d="M 22 38 L 17 43 L 13 43" stroke="#6600FF" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="13" cy="43" r="1.2" fill="#6600FF" opacity="0.9"/>
+  <path d="M 38 38 L 43 43 L 47 43" stroke="#6600FF" stroke-width="0.9" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="47" cy="43" r="1.2" fill="#6600FF" opacity="0.9"/>
+
+  <!-- Iris ticks -->
+  <path d="M 30 19.5 L 30 22" stroke="#00C8D4" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 30 38 L 30 40.5" stroke="#00C8D4" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 19.5 30 L 22 30" stroke="#00C8D4" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 38 30 L 40.5 30" stroke="#00C8D4" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+</svg>

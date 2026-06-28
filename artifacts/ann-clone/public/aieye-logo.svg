@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" fill="none">
+  <defs>
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8D4"/>
+      <stop offset="100%" stop-color="#6600FF"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C8D4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6600FF" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="pupilGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00C8D4"/>
+      <stop offset="60%" stop-color="#0066CC"/>
+      <stop offset="100%" stop-color="#6600FF"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer eye glow -->
+  <ellipse cx="30" cy="30" rx="26" ry="16" fill="url(#glowGrad)" filter="url(#glow)"/>
+
+  <!-- Eye outline -->
+  <path d="M 4 30 Q 14 10 30 10 Q 46 10 56 30 Q 46 50 30 50 Q 14 50 4 30 Z"
+        fill="none" stroke="url(#eyeGrad)" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Iris ring -->
+  <circle cx="30" cy="30" r="12" fill="none" stroke="url(#eyeGrad)" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Pupil -->
+  <circle cx="30" cy="30" r="7" fill="url(#pupilGrad)" filter="url(#glow)"/>
+
+  <!-- Inner shine dot -->
+  <circle cx="27" cy="27" r="2" fill="white" opacity="0.6"/>
+
+  <!-- Circuit lines radiating from eye -->
+  <!-- Top left -->
+  <path d="M 21 22 L 16 17 L 11 17" stroke="#00C8D4" stroke-width="0.8" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="11" cy="17" r="1" fill="#00C8D4" opacity="0.8"/>
+  <!-- Top right -->
+  <path d="M 39 22 L 44 17 L 49 17" stroke="#00C8D4" stroke-width="0.8" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="49" cy="17" r="1" fill="#00C8D4" opacity="0.8"/>
+  <!-- Bottom left -->
+  <path d="M 21 38 L 16 43 L 11 43" stroke="#6600FF" stroke-width="0.8" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="11" cy="43" r="1" fill="#6600FF" opacity="0.8"/>
+  <!-- Bottom right -->
+  <path d="M 39 38 L 44 43 L 49 43" stroke="#6600FF" stroke-width="0.8" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="49" cy="43" r="1" fill="#6600FF" opacity="0.8"/>
+  <!-- Left side -->
+  <path d="M 6 30 L 2 30" stroke="#00C8D4" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+  <!-- Right side -->
+  <path d="M 54 30 L 58 30" stroke="#00C8D4" stroke-width="0.8" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Iris tick marks -->
+  <path d="M 30 18.5 L 30 21" stroke="#00C8D4" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 30 39 L 30 41.5" stroke="#00C8D4" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 18.5 30 L 21 30" stroke="#00C8D4" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 39 30 L 41.5 30" stroke="#00C8D4" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- "AiEye" text -->
+  <text x="72" y="37" font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-weight="800" font-size="24" letter-spacing="-0.5" fill="white">
+    Ai
+  </text>
+  <text x="101" y="37" font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-weight="800" font-size="24" letter-spacing="-0.5" fill="url(#eyeGrad)">
+    Eye
+  </text>
+
+  <!-- Tagline -->
+  <text x="73" y="48" font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-weight="500" font-size="7.5" letter-spacing="2.5" fill="#00C8D4" opacity="0.75">
+    ADVANCED VISION · AI
+  </text>
+</svg>

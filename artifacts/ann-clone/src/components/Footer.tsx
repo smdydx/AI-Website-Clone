@@ -138,9 +138,9 @@ export function Footer() {
             className="md:col-span-1"
           >
             <img
-              src="/aieye-logo-transparent.png"
+              src="/aieye-logo.svg"
               alt="AiEye Technologies"
-              className="h-14 w-auto object-contain mb-3"
+              className="h-12 w-auto object-contain mb-3"
             />
             <div className="flex items-center gap-1.5 mb-5">
               <Building2 className="w-3.5 h-3.5 text-primary/70" />
