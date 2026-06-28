@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "W-16j9TeoWujnbWOwBnFs"
+uri = "file://attached_assets/hero-woman.png"
+type = "image"
+title = "Woman purple hair futuristic"
+
+[[generated]]
+id = "Bvt-MH6mHa2axxw-JcwWR"
+uri = "file://attached_assets/hero-dramatic.png"
+type = "image"
+title = "Dramatic fantasy portrait"
+
+[[generated]]
+id = "zFa_lO3o6yxmRuJ7_-vHx"
+uri = "file://attached_assets/gallery-cosmic.png"
+type = "image"
+title = "Cosmic space AI art"
+
+[[generated]]
+id = "y4AR8IeTvvj2EbLEFc_mw"
+uri = "file://attached_assets/gallery-abstract.png"
+type = "image"
+title = "Abstract colorful digital art"
+
+[[generated]]
+id = "2cRcjjzYsMzpAvfMDLoAE"
+uri = "file://attached_assets/gallery-warrior.png"
+type = "image"
+title = "Warrior fantasy portrait"
+
+[[generated]]
+id = "1srvl-ihmO8CRQXyYiI-f"
+uri = "file://attached_assets/gallery-landscape.png"
+type = "image"
+title = "Serene nature landscape"

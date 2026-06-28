@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ANN - AI Image Generator"
+version = "1.0.0"
+id = "artifacts/ann-clone"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20818
+
+[services.development]
+run = "pnpm --filter @workspace/ann-clone run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ann-clone", "run", "build" ]
+publicDir = "artifacts/ann-clone/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20818"
+BASE_PATH = "/"

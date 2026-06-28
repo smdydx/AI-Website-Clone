@@ -1,0 +1,1 @@
+- [Pnpm/Node workflow setup](pnpm-node-nix-paths.md) — node/pnpm not in PATH in workflow shell; must use full nix store paths and --force flag
