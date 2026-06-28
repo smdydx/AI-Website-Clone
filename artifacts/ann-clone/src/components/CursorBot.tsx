@@ -8,19 +8,19 @@ interface Message {
 }
 
 const BOT_RESPONSES: Record<string, string> = {
-  hello: "Hey there! I'm AXON. Ask me anything about ANN's AI Voice Agents!",
-  hi: "Hi! I'm AXON — ANN's AI assistant. What would you like to know?",
+  hello: "Hey there! I'm AXON. Ask me anything about AiEye's AI Voice Agents!",
+  hi: "Hi! I'm AXON — AiEye's AI assistant. What would you like to know?",
   pricing: "3 plans: Starter (500 calls/month), Pro at $299/mo (unlimited + warm transfers), Enterprise (custom pricing + API).",
-  features: "ANN offers AI-powered outbound & inbound calling, lead qualification, warm transfers, CRM sync, and A/B script testing.",
+  features: "AiEye offers AI-powered outbound & inbound calling, lead qualification, warm transfers, CRM sync, and A/B script testing.",
   how: "Configure your AI voice agent → Upload leads → Launch calls. Done automatically!",
   start: "Click 'Get Started' in the header — schedule a demo with our team!",
   quality: "Near-zero latency (<500ms) AI voices that sound completely human. Trained for natural sales conversations.",
   style: "Multiple voice options: different accents, tones, and speaking styles optimized for your industry!",
   api: "Enterprise plan includes full REST API access, webhooks, and CRM integrations.",
-  blog: "Visit our Blog for case studies, conversion tips, and the latest ANN updates!",
+  blog: "Visit our Blog for case studies, conversion tips, and the latest AiEye updates!",
   shop: "Check the Shop for AI agent templates, voice packs, and campaign add-ons.",
   contact: "Reach us via the Contacts page — email, phone, or just ask me!",
-  default: "Great question! ANN's AI voice agents automate phone campaigns and boost conversions. Want to know about pricing, features, or how to start?",
+  default: "Great question! AiEye's AI voice agents automate phone campaigns and boost conversions. Want to know about pricing, features, or how to start?",
 };
 
 function getBotResponse(input: string): string {

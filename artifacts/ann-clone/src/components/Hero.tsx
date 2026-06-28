@@ -13,7 +13,7 @@ import cyber6 from "@assets/hero-cyber-6.png";
 const WORDS = ["Future", "Revolution", "Evolution", "Companion"];
 
 const STRIP_IMAGES = [
-  { src: cyber1, label: "ANN Engine", sub: "Core System", color: "#5EC900" },
+  { src: cyber1, label: "AiEye Engine", sub: "Core System", color: "#5EC900" },
   { src: cyber2, label: "Neural Space", sub: "AI Network", color: "#EFA758" },
   { src: cyber3, label: "Virtual Realm", sub: "Analytics", color: "#6600FF" },
   { src: cyber4, label: "Cyber Security", sub: "Guard Core", color: "#00C8D4" },

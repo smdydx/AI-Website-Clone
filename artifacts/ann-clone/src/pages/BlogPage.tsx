@@ -62,14 +62,14 @@ const POSTS = [
     authorRole: "Artist & Creator",
   },
   {
-    title: "ANN v3.0: What's New in This Release",
+    title: "AiEye v3.0: What's New in This Release",
     excerpt: "4K upscaling, new style presets, improved negative prompting, and more in our biggest update yet.",
     date: "May 20, 2026",
     readTime: "4 min read",
     tag: "Release",
     tagColor: "#a855f7",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
-    author: "ANN Team",
+    author: "AiEye Team",
     authorRole: "Engineering",
   },
 ];
@@ -93,7 +93,7 @@ export default function BlogPage() {
               Journal &amp; Insights
             </span>
             <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
-              ANN <span className="text-accent">Blog</span>
+              AiEye <span className="text-accent">Blog</span>
             </h1>
             <p className="text-xl text-white/55 max-w-2xl leading-relaxed">
               Tutorials, technical deep-dives, and stories from the frontier of AI image generation and voice technology.

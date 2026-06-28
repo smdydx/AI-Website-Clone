@@ -52,13 +52,13 @@ const OFFICES = [
   },
   {
     city: "San Francisco",
-    address: "ANN Global HQ\n101 Mission Street, SF, CA 94105",
+    address: "AiEye Global HQ\n101 Mission Street, SF, CA 94105",
     timezone: "PST (UTC-8)",
     phone: "+1 (415) 820-9800",
   },
   {
     city: "London",
-    address: "ANN EU Operations\n1 Canada Square, London E14 5AB",
+    address: "AiEye EU Operations\n1 Canada Square, London E14 5AB",
     timezone: "GMT (UTC+0)",
     phone: "+44 20 7946 0800",
   },

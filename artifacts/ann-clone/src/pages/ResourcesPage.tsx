@@ -29,7 +29,7 @@ const LEARN_RESOURCES = [
     icon: Cpu,
     color: "#a855f7",
     title: "Research & Technology",
-    desc: "Our technical papers, model benchmarks, and R&D updates from the ANN AI team.",
+    desc: "Our technical papers, model benchmarks, and R&D updates from the AiEye AI team.",
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=80",
     cta: "Read Research",
   },
@@ -46,7 +46,7 @@ const TEAM_MEMBERS = [
   {
     name: "Marcus Chen",
     role: "Chief Technology Officer",
-    bio: "Ex-Google Brain engineer. Architect of the ANN neural voice engine and real-time inference platform.",
+    bio: "Ex-Google Brain engineer. Architect of the AiEye neural voice engine and real-time inference platform.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     color: "#5EC900",
   },
@@ -119,7 +119,7 @@ export default function ResourcesPage() {
               <span className="text-primary">Build Together.</span>
             </h1>
             <p className="text-xl text-white/55 max-w-2xl leading-relaxed">
-              Everything you need to master ANN — from beginner guides to deep technical research, and a look inside the team building the future of voice AI.
+              Everything you need to master AiEye — from beginner guides to deep technical research, and a look inside the team building the future of voice AI.
             </p>
           </motion.div>
         </div>
@@ -200,7 +200,7 @@ export default function ResourcesPage() {
                 We're Building the Voice of AI Commerce
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
-                ANN — a product of <strong className="text-white">AiEye Technologies Private Limited</strong> — was founded in 2023 with a single mission: make enterprise-grade AI voice technology accessible to every business, regardless of size.
+                AiEye — a product of <strong className="text-white">AiEye Technologies Private Limited</strong> — was founded in 2023 with a single mission: make enterprise-grade AI voice technology accessible to every business, regardless of size.
               </p>
               <p className="text-white/60 leading-relaxed mb-8">
                 Today, we process over 10 million calls per month for businesses across 40+ countries. Our AI agents speak 28 languages, maintain perfect compliance records, and have generated over $2 billion in measurable revenue for our clients.

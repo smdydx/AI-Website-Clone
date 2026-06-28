@@ -88,7 +88,7 @@ export default function PagesPage() {
               Page Templates
             </span>
             <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
-              All ANN<br />
+              All AiEye<br />
               <span className="relative inline-block">
                 <span className="relative z-10 px-3">Templates</span>
                 <span className="absolute inset-0 bg-primary -skew-x-3 z-0 rounded-sm" />

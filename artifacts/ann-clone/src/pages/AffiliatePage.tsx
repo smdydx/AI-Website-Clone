@@ -25,7 +25,7 @@ const STEPS = [
     icon: Users,
     color: "#6600FF",
     title: "Sign Up Free",
-    desc: "Create your ANN affiliate account in seconds. No cost, no minimum requirements. Just your email and you're in.",
+    desc: "Create your AiEye affiliate account in seconds. No cost, no minimum requirements. Just your email and you're in.",
   },
   {
     number: "02",
@@ -38,7 +38,7 @@ const STEPS = [
     number: "03",
     icon: TrendingUp,
     color: "#EFA758",
-    title: "Promote ANN",
+    title: "Promote AiEye",
     desc: "Share your link on social media, blogs, email lists, or anywhere your audience lives. We track every click.",
   },
   {
@@ -107,8 +107,8 @@ const FAQS = [
     a: "Absolutely not. There are no earnings caps. The more you refer, the more you earn — with no ceilings or restrictions.",
   },
   {
-    q: "Can I promote ANN if I'm not a customer?",
-    a: "Yes! You don't need to be an ANN customer to become an affiliate. We encourage you to try it first so you can speak authentically, but it's not required.",
+    q: "Can I promote AiEye if I'm not a customer?",
+    a: "Yes! You don't need to be an AiEye customer to become an affiliate. We encourage you to try it first so you can speak authentically, but it's not required.",
   },
 ];
 
@@ -162,7 +162,7 @@ export default function AffiliatePage() {
               </span>
 
               <h1 className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
-                Join ANN<br />
+                Join AiEye<br />
                 <span className="relative inline-block mt-2">
                   <span className="relative z-10 px-3 text-white">Affiliate</span>
                   <span className="absolute inset-0 bg-primary -skew-x-3 z-0 rounded-sm" />
@@ -171,7 +171,7 @@ export default function AffiliatePage() {
               </h1>
 
               <p className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg">
-                A simple and easy way to earn <strong className="text-white">50% of every sale</strong> you refer to ANN. Earn up to{" "}
+                A simple and easy way to earn <strong className="text-white">50% of every sale</strong> you refer to AiEye. Earn up to{" "}
                 <span className="text-accent font-bold">$291</span> per referred customer — and keep earning from recurring customers as well.
               </p>
 
@@ -327,7 +327,7 @@ export default function AffiliatePage() {
               <span className="text-primary text-sm font-bold tracking-widest uppercase">Why Join</span>
               <span className="w-8 h-px bg-primary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Why Affiliates Love ANN</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Why Affiliates Love AiEye</h2>
             <p className="text-white/50 mt-4 max-w-xl mx-auto">
               We built the most generous affiliate program in AI. Because when you win, we win.
             </p>
@@ -471,7 +471,7 @@ export default function AffiliatePage() {
               Start Earning Today
             </h2>
             <p className="text-white/55 text-lg mb-8 leading-relaxed">
-              Join hundreds of affiliates already earning with ANN. Sign up in 60 seconds and get your first commission within days.
+              Join hundreds of affiliates already earning with AiEye. Sign up in 60 seconds and get your first commission within days.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button

@@ -5,8 +5,8 @@ import { MobileSwipeContainer } from "./MobileSwipeContainer";
 const STEPS = [
   {
     number: "01",
-    title: "Tell ANN",
-    description: "Simply type or speak your request using natural language. ANN understands context and intent effortlessly.",
+    title: "Tell AiEye",
+    description: "Simply type or speak your request using natural language. AiEye understands context and intent effortlessly.",
     accent: "#6600FF",
   },
   {
@@ -24,7 +24,7 @@ const STEPS = [
   {
     number: "04",
     title: "Keep Learning",
-    description: "ANN continuously learns from your interactions, becoming smarter and more personalized over time.",
+    description: "AiEye continuously learns from your interactions, becoming smarter and more personalized over time.",
     accent: "#00C8C8",
   },
 ];

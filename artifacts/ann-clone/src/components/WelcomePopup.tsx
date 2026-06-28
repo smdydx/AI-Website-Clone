@@ -75,7 +75,7 @@ export function WelcomePopup() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
-                <h1 className="font-heading font-extrabold text-3xl sm:text-5xl tracking-tighter text-white mb-1 sm:mb-2">ANN</h1>
+                <h1 className="font-heading font-extrabold text-3xl sm:text-5xl tracking-tighter text-white mb-1 sm:mb-2">AiEye</h1>
                 <p className="text-primary text-xs sm:text-sm font-bold tracking-widest uppercase mb-4 sm:mb-6">AI Personal Assistant</p>
               </motion.div>
 
@@ -124,7 +124,7 @@ export function WelcomePopup() {
                   onClick={close}
                   className="flex-1 py-3 sm:py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-full transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(102,0,255,0.5)] flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                  Explore ANN <ArrowRight className="w-4 h-4" />
+                  Explore AiEye <ArrowRight className="w-4 h-4" />
                 </button>
                 <button
                   onClick={close}
