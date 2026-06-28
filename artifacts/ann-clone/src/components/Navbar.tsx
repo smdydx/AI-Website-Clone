@@ -187,7 +187,11 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 z-10">
-            <span className="font-heading font-bold text-3xl tracking-tighter">ANN</span>
+            <img
+              src="/aieye-logo.jpeg"
+              alt="AiEye Technologies"
+              className="h-9 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop nav */}
