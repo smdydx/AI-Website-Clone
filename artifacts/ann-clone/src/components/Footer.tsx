@@ -137,7 +137,11 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             className="md:col-span-1"
           >
-            <span className="font-heading font-bold text-3xl tracking-tighter block mb-2">AiEye</span>
+            <img
+              src="/aieye-logo-transparent.png"
+              alt="AiEye Technologies"
+              className="h-14 w-auto object-contain mb-3"
+            />
             <div className="flex items-center gap-1.5 mb-5">
               <Building2 className="w-3.5 h-3.5 text-primary/70" />
               <span className="text-xs text-primary/70 font-semibold">AiEye Technologies Private Limited</span>
