@@ -188,9 +188,9 @@ export function Navbar() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 z-10">
             <img
-              src="/aieye-logo.jpeg"
+              src="/aieye-logo-transparent.png"
               alt="AiEye Technologies"
-              className="h-9 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </Link>
 

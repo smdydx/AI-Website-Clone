@@ -10,17 +10,28 @@ export function CTA() {
 
   return (
     <section ref={ref} className="py-36 relative overflow-hidden">
-      <div className="absolute inset-0 bg-primary/15" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,rgba(102,0,255,0.35),transparent)]" />
+      {/* AI Robot background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1800&q=80"
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Deep dark overlay to keep text readable */}
+        <div className="absolute inset-0 bg-[#050913]/80" />
+        {/* Purple tint overlay matching brand */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,rgba(102,0,255,0.45),transparent)]" />
+      </div>
+
       <motion.div
         animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-primary/20 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-primary/20 pointer-events-none z-10"
       />
       <motion.div
         animate={{ scale: [1.15, 1, 1.15], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-primary/10 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border border-primary/10 pointer-events-none z-10"
       />
 
       <div className="container mx-auto px-6 relative z-10 text-center">
