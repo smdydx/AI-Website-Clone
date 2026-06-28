@@ -284,16 +284,19 @@ export default function AffiliatePage() {
         </div>
       </section>
 
-      {/* ── AI SHOWCASE GALLERY ── */}
-      <section className="py-20 relative overflow-hidden border-t border-white/5">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_40%_at_50%_50%,rgba(102,0,255,0.06),transparent)]" />
+      {/* ── AI SHOWCASE COLLAGE ── */}
+      <section className="py-24 relative overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(102,0,255,0.08),transparent)]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00C8D4]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="w-8 h-px bg-[#00C8D4]" />
@@ -306,32 +309,173 @@ export default function AffiliatePage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {GALLERY_IMAGES.map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.92 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.6 }}
-                className={`relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer ${
-                  i === 0 ? "md:col-span-2 row-span-1" : ""
-                }`}
-                style={{ height: i === 0 ? 280 : 220 }}
-              >
-                <img
-                  src={img.src}
-                  alt={img.label}
-                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-[10px] font-bold text-accent mb-0.5">{img.sub}</p>
-                  <p className="text-sm font-bold text-white">{img.label}</p>
-                </div>
-              </motion.div>
-            ))}
+          {/* Collage layout */}
+          <div className="relative w-full" style={{ height: 680 }}>
+
+            {/* Card 1 — large center-left, slight tilt left */}
+            <motion.div
+              initial={{ opacity: 0, y: 40, rotate: -4 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -3 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.0 }}
+              whileHover={{ rotate: 0, scale: 1.03, zIndex: 20 }}
+              className="absolute rounded-3xl overflow-hidden border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_0_1px_rgba(102,0,255,0.2)] cursor-pointer group"
+              style={{ width: 340, height: 400, top: 60, left: "2%" }}
+            >
+              <img src="/ai-robot-7.jpeg" alt="AI Voice Agent" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[10px] font-extrabold text-accent tracking-widest uppercase mb-1">Real-time Response</p>
+                <p className="text-base font-bold text-white">AI Voice Agent</p>
+              </div>
+              <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-accent animate-pulse" />
+            </motion.div>
+
+            {/* Card 2 — top center, large hero card, tilted slightly right */}
+            <motion.div
+              initial={{ opacity: 0, y: -30, rotate: 2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 2 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              whileHover={{ rotate: 0, scale: 1.03, zIndex: 20 }}
+              className="absolute rounded-3xl overflow-hidden border border-[#00C8D4]/25 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_40px_rgba(0,200,212,0.12)] cursor-pointer group"
+              style={{ width: 380, height: 260, top: 0, left: "30%", zIndex: 5 }}
+            >
+              <img src="/ai-robot-4.jpeg" alt="Neural Interface" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[10px] font-extrabold text-[#00C8D4] tracking-widest uppercase mb-1">Deep Learning</p>
+                <p className="text-base font-bold text-white">Neural Interface</p>
+              </div>
+            </motion.div>
+
+            {/* Card 3 — right side tall, slight tilt right */}
+            <motion.div
+              initial={{ opacity: 0, x: 60, rotate: 3 }}
+              whileInView={{ opacity: 1, x: 0, rotate: 3 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              whileHover={{ rotate: 0, scale: 1.03, zIndex: 20 }}
+              className="absolute rounded-3xl overflow-hidden border border-[#EFA758]/25 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_40px_rgba(239,167,88,0.1)] cursor-pointer group"
+              style={{ width: 280, height: 380, top: 40, right: "2%", zIndex: 4 }}
+            >
+              <img src="/ai-robot-2.jpeg" alt="AI Call Center" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[10px] font-extrabold text-[#EFA758] tracking-widest uppercase mb-1">24/7 Available</p>
+                <p className="text-base font-bold text-white">AI Call Center</p>
+              </div>
+            </motion.div>
+
+            {/* Card 4 — bottom left, overlaps card 1, tilt right */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, rotate: 3 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 4 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              whileHover={{ rotate: 0, scale: 1.04, zIndex: 20 }}
+              className="absolute rounded-3xl overflow-hidden border border-[#FF4D9D]/25 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_40px_rgba(255,77,157,0.1)] cursor-pointer group"
+              style={{ width: 260, height: 300, bottom: 20, left: "18%", zIndex: 6 }}
+            >
+              <img src="/ai-robot-3.jpeg" alt="Robot Head" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[10px] font-extrabold text-[#FF4D9D] tracking-widest uppercase mb-1">AI Core</p>
+                <p className="text-base font-bold text-white">Robot Vision</p>
+              </div>
+            </motion.div>
+
+            {/* Card 5 — bottom center, slight tilt left */}
+            <motion.div
+              initial={{ opacity: 0, y: 60, rotate: -2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -2 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+              whileHover={{ rotate: 0, scale: 1.04, zIndex: 20 }}
+              className="absolute rounded-3xl overflow-hidden border border-[#5EC900]/25 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_40px_rgba(94,201,0,0.1)] cursor-pointer group"
+              style={{ width: 320, height: 270, bottom: 10, left: "37%", zIndex: 7 }}
+            >
+              <img src="/ai-robot-6.jpeg" alt="Digital Assistant" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[10px] font-extrabold text-[#5EC900] tracking-widest uppercase mb-1">Always On</p>
+                <p className="text-base font-bold text-white">Digital Assistant</p>
+              </div>
+            </motion.div>
+
+            {/* Card 6 — bottom right, slight tilt left, overlaps right card */}
+            <motion.div
+              initial={{ opacity: 0, x: 40, rotate: -3 }}
+              whileInView={{ opacity: 1, x: 0, rotate: -3 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              whileHover={{ rotate: 0, scale: 1.04, zIndex: 20 }}
+              className="absolute rounded-3xl overflow-hidden border border-primary/30 shadow-[0_30px_80px_rgba(0,0,0,0.6),0_0_40px_rgba(102,0,255,0.12)] cursor-pointer group"
+              style={{ width: 250, height: 260, bottom: 30, right: "4%", zIndex: 6 }}
+            >
+              <img src="/ai-robot-5.jpeg" alt="Voice AI" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[10px] font-extrabold text-primary tracking-widest uppercase mb-1">Natural Language</p>
+                <p className="text-base font-bold text-white">Voice AI</p>
+              </div>
+            </motion.div>
+
+            {/* Floating badge — center */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5, type: "spring" }}
+              className="absolute z-20 bg-[#07091a]/90 backdrop-blur-md border border-primary/40 rounded-2xl px-5 py-3 shadow-[0_10px_40px_rgba(102,0,255,0.2)]"
+              style={{ top: "40%", left: "43%", transform: "translate(-50%, -50%)" }}
+            >
+              <p className="text-[10px] text-white/40 font-bold uppercase tracking-widest mb-0.5">AI Powered</p>
+              <p className="text-sm font-extrabold text-white">8 Capabilities</p>
+              <div className="flex gap-1 mt-2">
+                {["#6600FF","#5EC900","#EFA758","#00C8D4"].map(c => (
+                  <span key={c} className="w-2 h-2 rounded-full" style={{ backgroundColor: c }} />
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Card 7 — small floating card top-left overlapping card 1 */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              whileHover={{ scale: 1.08, zIndex: 20 }}
+              className="absolute rounded-2xl overflow-hidden border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer group"
+              style={{ width: 200, height: 180, top: 30, left: "24%", zIndex: 8 }}
+            >
+              <img src="/ai-robot-1.jpeg" alt="Humanoid AI" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <p className="text-[9px] font-extrabold text-[#00C8D4] tracking-widest uppercase mb-0.5">Humanoid AI</p>
+                <p className="text-xs font-bold text-white">AiEye Engine</p>
+              </div>
+            </motion.div>
+
+            {/* Card 8 — small floating bottom-left corner */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: -5 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              whileHover={{ rotate: 0, scale: 1.08, zIndex: 20 }}
+              className="absolute rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-pointer group"
+              style={{ width: 190, height: 170, bottom: 15, left: "3%", zIndex: 5 }}
+            >
+              <img src="/ai-robot-8.jpeg" alt="Smart Bot" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <p className="text-[9px] font-extrabold text-[#EFA758] tracking-widest uppercase mb-0.5">Conversational AI</p>
+                <p className="text-xs font-bold text-white">Smart Bot</p>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
