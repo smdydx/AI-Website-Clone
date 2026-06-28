@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
-import { CTA, Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Link } from "wouter";
 import {
   DollarSign,
@@ -137,18 +137,37 @@ const TIERS = [
   },
 ];
 
+const GALLERY_IMAGES = [
+  { src: "/ai-robot-7.jpeg", label: "AI Voice Agent", sub: "Real-time Response" },
+  { src: "/ai-robot-2.jpeg", label: "AI Call Center", sub: "24/7 Available" },
+  { src: "/ai-robot-4.jpeg", label: "Neural Interface", sub: "Deep Learning" },
+  { src: "/ai-robot-6.jpeg", label: "Digital Assistant", sub: "Always On" },
+  { src: "/ai-robot-5.jpeg", label: "Voice AI", sub: "Natural Language" },
+  { src: "/ai-robot-8.jpeg", label: "Smart Bot", sub: "Conversational AI" },
+];
+
 export default function AffiliatePage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-[75vh] flex items-center pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="/ai-robot-4.jpeg"
+            alt="AI background"
+            className="w-full h-full object-cover object-center opacity-15"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
+        </div>
+
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_30%_50%,rgba(102,0,255,0.13),transparent)]" />
-        <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             {/* Left text */}
             <motion.div
@@ -207,54 +226,112 @@ export default function AffiliatePage() {
               </div>
             </motion.div>
 
-            {/* Right visual card */}
+            {/* Right: hero image stack */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative"
+              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden lg:block relative"
             >
-              <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-primary/20 via-[#07091a] to-accent/10 p-8">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(102,0,255,0.15),transparent_60%)]" />
-
-                {/* Earnings simulation card */}
-                <div className="relative z-10 space-y-4">
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-sm font-bold text-white/50 uppercase tracking-widest">Live Earnings</span>
-                    <span className="flex items-center gap-1.5 text-xs text-accent font-bold bg-accent/10 border border-accent/20 px-2 py-1 rounded-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                      Active
-                    </span>
+              {/* Main large image */}
+              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.6),0_0_0_1px_rgba(102,0,255,0.2)]">
+                <img
+                  src="/ai-robot-7.jpeg"
+                  alt="AI Agent"
+                  className="w-full h-[420px] object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                  <div>
+                    <p className="text-xs font-bold text-accent mb-1">AI VOICE AGENT</p>
+                    <p className="text-white font-bold text-lg">Always Available, Always Smart</p>
                   </div>
-
-                  {[
-                    { label: "This Month", amount: "$1,455.00", refs: "5 referrals", color: "#5EC900" },
-                    { label: "Last Month", amount: "$873.50", refs: "3 referrals", color: "#6600FF" },
-                    { label: "Total Earned", amount: "$4,120.00", refs: "All time", color: "#EFA758" },
-                  ].map((row) => (
-                    <div
-                      key={row.label}
-                      className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5"
-                    >
-                      <div>
-                        <p className="text-xs text-white/45">{row.label}</p>
-                        <p className="text-sm text-white/60 mt-0.5">{row.refs}</p>
-                      </div>
-                      <span className="text-xl font-extrabold font-mono" style={{ color: row.color }}>
-                        {row.amount}
-                      </span>
-                    </div>
-                  ))}
-
-                  <div className="mt-4 p-3.5 rounded-xl border border-primary/30 bg-primary/10 flex items-center gap-3">
-                    <Star className="w-5 h-5 text-primary shrink-0" />
-                    <p className="text-xs text-white/70">
-                      Referring just <strong className="text-white">1 customer per week</strong> earns you over <strong className="text-primary">$7,500/year</strong>
-                    </p>
-                  </div>
+                  <span className="flex items-center gap-1.5 text-xs text-accent font-bold bg-accent/15 border border-accent/30 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                    Live
+                  </span>
                 </div>
               </div>
+
+              {/* Small overlay card — robot 1 */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute -bottom-8 -left-10 w-48 h-36 rounded-2xl overflow-hidden border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#07091a]"
+              >
+                <img src="/ai-robot-1.jpeg" alt="Robot" className="w-full h-full object-cover opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                <div className="absolute bottom-2 left-2 right-2">
+                  <p className="text-[9px] font-bold text-[#00C8D4]">CORE SYSTEM</p>
+                  <p className="text-[11px] text-white font-semibold">AiEye Engine</p>
+                </div>
+              </motion.div>
+
+              {/* Earnings badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute -top-5 -right-5 bg-[#07091a] border border-primary/30 rounded-2xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.4),0_0_30px_rgba(102,0,255,0.1)]"
+              >
+                <p className="text-[10px] text-white/40 mb-1">Monthly Earnings</p>
+                <p className="text-2xl font-black text-[#5EC900]">$1,455</p>
+                <p className="text-[10px] text-white/40 mt-0.5">5 referrals this month</p>
+              </motion.div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── AI SHOWCASE GALLERY ── */}
+      <section className="py-20 relative overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_40%_at_50%_50%,rgba(102,0,255,0.06),transparent)]" />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="w-8 h-px bg-[#00C8D4]" />
+              <span className="text-[#00C8D4] text-sm font-bold tracking-widest uppercase">Powered by AI</span>
+              <span className="w-8 h-px bg-[#00C8D4]" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Meet Your AI Assistant</h2>
+            <p className="text-white/50 mt-4 max-w-xl mx-auto">
+              AiEye combines voice, chat, and vision AI into one powerful platform you can promote with confidence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {GALLERY_IMAGES.map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.92 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.6 }}
+                className={`relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer ${
+                  i === 0 ? "md:col-span-2 row-span-1" : ""
+                }`}
+                style={{ height: i === 0 ? 280 : 220 }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.label}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-[10px] font-bold text-accent mb-0.5">{img.sub}</p>
+                  <p className="text-sm font-bold text-white">{img.label}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -262,6 +339,13 @@ export default function AffiliatePage() {
       {/* ── STEPS ── */}
       <section className="py-24 relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_40%_at_50%_0%,rgba(94,201,0,0.04),transparent)]" />
+
+        {/* Background decorative image */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-8 pointer-events-none">
+          <img src="/ai-robot-3.jpeg" alt="" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background to-transparent" />
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -311,9 +395,55 @@ export default function AffiliatePage() {
         </div>
       </section>
 
+      {/* ── AI AGENT FEATURE BANNER ── */}
+      <section className="py-0 relative overflow-hidden border-t border-white/5">
+        <div className="relative h-[340px] md:h-[420px]">
+          <img
+            src="/ai-robot-2.jpeg"
+            alt="AI Call Center Agent"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-6">
+              <motion.div
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="max-w-xl"
+              >
+                <p className="text-accent text-sm font-bold tracking-widest uppercase mb-3">The Product You're Promoting</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
+                  AiEye — The World's Most Advanced AI Voice Agent
+                </h2>
+                <p className="text-white/60 text-base leading-relaxed mb-6">
+                  Human-like AI that handles phone calls, books appointments, qualifies leads, and closes sales — 24/7, in any language.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {["Phone Calls", "SMS", "WhatsApp", "Live Chat"].map((ch) => (
+                    <span key={ch} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs text-white/70 font-medium">
+                      {ch}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── BENEFITS ── */}
       <section className="py-24 relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_50%,rgba(102,0,255,0.06),transparent)]" />
+
+        {/* Left background image */}
+        <div className="absolute left-0 top-0 bottom-0 w-1/4 opacity-8 pointer-events-none">
+          <img src="/ai-robot-5.jpeg" alt="" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-l from-background to-transparent" />
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -418,6 +548,51 @@ export default function AffiliatePage() {
         </div>
       </section>
 
+      {/* ── DIGITAL ASSISTANT VISUAL SPLIT ── */}
+      <section className="py-0 border-t border-white/5 relative overflow-hidden">
+        <div className="grid md:grid-cols-2 min-h-[360px]">
+          {/* Left image */}
+          <div className="relative">
+            <img src="/ai-robot-6.jpeg" alt="Digital AI" className="w-full h-full object-cover object-center min-h-[280px]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+          </div>
+
+          {/* Right content */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col justify-center p-10 md:p-16 bg-[#07091a] relative"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_100%_50%,rgba(0,200,212,0.06),transparent)]" />
+            <div className="relative z-10">
+              <p className="text-[#00C8D4] text-sm font-bold tracking-widest uppercase mb-4">Real Impact, Real Earnings</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 leading-tight">
+                Over 500+ affiliates already earning with AiEye
+              </h2>
+              <p className="text-white/55 leading-relaxed mb-8">
+                Our affiliates span bloggers, marketers, agency owners, and coaches. Anyone with an audience can earn significant recurring income promoting AiEye.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { val: "500+", label: "Active Affiliates" },
+                  { val: "$2M+", label: "Total Paid Out" },
+                  { val: "38%", label: "Avg. Conversion Rate" },
+                  { val: "4.9★", label: "Affiliate Satisfaction" },
+                ].map((s) => (
+                  <div key={s.label} className="p-4 rounded-xl bg-white/4 border border-white/6">
+                    <p className="text-xl font-extrabold text-white">{s.val}</p>
+                    <p className="text-xs text-white/40 mt-0.5">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="py-24 relative overflow-hidden border-t border-white/5">
         <div className="container mx-auto px-6 relative z-10 max-w-3xl">
@@ -455,42 +630,54 @@ export default function AffiliatePage() {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section className="py-24 relative overflow-hidden border-t border-white/5">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_50%,rgba(102,0,255,0.1),transparent)]" />
-        <div className="container mx-auto px-6 relative z-10 text-center max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="w-16 h-16 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center mx-auto mb-6">
-              <Gift className="w-8 h-8 text-primary" />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-              Start Earning Today
-            </h2>
-            <p className="text-white/55 text-lg mb-8 leading-relaxed">
-              Join hundreds of affiliates already earning with AiEye. Sign up in 60 seconds and get your first commission within days.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                className="px-10 py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-full transition-all hover:shadow-[0_0_40px_rgba(102,0,255,0.5)] text-base flex items-center gap-2"
+      <section className="relative overflow-hidden border-t border-white/5">
+        <div className="relative">
+          {/* Background image */}
+          <img
+            src="/ai-robot-8.jpeg"
+            alt="AI Assistant"
+            className="w-full h-[500px] object-cover object-center opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_50%,rgba(102,0,255,0.15),transparent)]" />
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="container mx-auto px-6 relative z-10 text-center max-w-2xl">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
               >
-                Join Now — It's Free <ArrowRight className="w-4 h-4" />
-              </motion.button>
-              <Link href="/contacts">
-                <motion.button
-                  whileHover={{ scale: 1.04 }}
-                  className="px-10 py-4 border border-white/20 hover:border-white/50 text-white font-medium rounded-full transition-all hover:bg-white/5 text-base"
-                >
-                  Contact Sales
-                </motion.button>
-              </Link>
+                <div className="w-16 h-16 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center mx-auto mb-6">
+                  <Gift className="w-8 h-8 text-primary" />
+                </div>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                  Start Earning Today
+                </h2>
+                <p className="text-white/55 text-lg mb-8 leading-relaxed">
+                  Join hundreds of affiliates already earning with AiEye. Sign up in 60 seconds and get your first commission within days.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <motion.button
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 0.97 }}
+                    className="px-10 py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-full transition-all hover:shadow-[0_0_40px_rgba(102,0,255,0.5)] text-base flex items-center gap-2"
+                  >
+                    Join Now — It's Free <ArrowRight className="w-4 h-4" />
+                  </motion.button>
+                  <Link href="/contacts">
+                    <motion.button
+                      whileHover={{ scale: 1.04 }}
+                      className="px-10 py-4 border border-white/20 hover:border-white/50 text-white font-medium rounded-full transition-all hover:bg-white/5 text-base"
+                    >
+                      Contact Sales
+                    </motion.button>
+                  </Link>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
