@@ -17,7 +17,8 @@ const TABS = [
       "5 Second Callback: Calls incoming leads within 5 seconds of creation."
     ],
     highlight: "5s speed-to-lead latency",
-    color: "#5EC900"
+    color: "#5EC900",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
   },
   {
     id: "workforce",
@@ -32,7 +33,8 @@ const TABS = [
       "Flow-Based Control: Guarantees brand compliance with word-for-word script optimization."
     ],
     highlight: "Near-zero speech latency (<500ms)",
-    color: "#00C8D4"
+    color: "#00C8D4",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
   },
   {
     id: "handoffs",
@@ -46,7 +48,8 @@ const TABS = [
       "Live Scheduling: Integrates with your calendars to book qualified appointments automatically."
     ],
     highlight: "Direct warm-transfers to sales reps",
-    color: "#EFA758"
+    color: "#EFA758",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
   },
   {
     id: "optimization",
@@ -60,7 +63,8 @@ const TABS = [
       "Reporting & Analytics: Detailed call recordings, transcriptions, and qualitative performance dashboards."
     ],
     highlight: "Continuous A/B script testing",
-    color: "#6600FF"
+    color: "#6600FF",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
   },
   {
     id: "integrations",
@@ -75,6 +79,7 @@ const TABS = [
     ],
     highlight: "CRM & Calendar bi-directional sync",
     color: "#00C8D4",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
     brands: ["Salesforce", "HubSpot", "Zoho", "Pipedrive"]
   }
 ];
@@ -710,50 +715,87 @@ export function OneAICapabilities() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch"
             >
               {/* Tab Content Info */}
-              <div className="lg:col-span-7 flex flex-col justify-center p-8 lg:p-10 rounded-2xl bg-[#07091a] border border-white/5 shadow-2xl relative">
-                {/* Visual Glow behind info card */}
-                <div 
-                  className="absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-10 blur-[80px] pointer-events-none"
+              <div className="lg:col-span-7 flex flex-col justify-center rounded-2xl bg-[#07091a] border border-white/5 shadow-2xl relative overflow-hidden">
+                {/* Visual Glow */}
+                <div
+                  className="absolute -top-10 -left-10 w-40 h-40 rounded-full opacity-10 blur-[80px] pointer-events-none z-0"
                   style={{ backgroundColor: activeTab.color }}
                 />
 
-                <span
-                  className="inline-block self-start text-[10px] font-extrabold tracking-widest uppercase px-3 py-1 rounded-full mb-4 border"
-                  style={{ borderColor: `${activeTab.color}30`, backgroundColor: `${activeTab.color}08`, color: activeTab.color }}
-                >
-                  {activeTab.name}
-                </span>
+                {/* Tab Image Banner */}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab.id + "-img"}
+                    initial={{ opacity: 0, scale: 1.04 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
+                    className="relative w-full h-44 shrink-0 overflow-hidden"
+                  >
+                    <img
+                      src={(activeTab as typeof activeTab & { image: string }).image}
+                      alt={activeTab.title}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Dark overlay to keep text legible below */}
+                    <div className="absolute inset-0 bg-[#07091a]/50" />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: `linear-gradient(180deg, transparent 30%, #07091a 100%)`,
+                      }}
+                    />
+                    {/* Colored accent stripe on image */}
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: `linear-gradient(135deg, ${activeTab.color}1A 0%, transparent 55%)`,
+                      }}
+                    />
+                    {/* Corner bracket decoration */}
+                    <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 rounded-tl" style={{ borderColor: activeTab.color }} />
+                    <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 rounded-tr" style={{ borderColor: activeTab.color }} />
+                    {/* Tab label on the image */}
+                    <span
+                      className="absolute bottom-3 left-4 text-[10px] font-extrabold tracking-widest uppercase px-3 py-1 rounded-full border backdrop-blur-sm"
+                      style={{ borderColor: `${activeTab.color}40`, backgroundColor: `${activeTab.color}15`, color: activeTab.color }}
+                    >
+                      {activeTab.name}
+                    </span>
+                  </motion.div>
+                </AnimatePresence>
 
-                <h3 className="text-3xl font-extrabold text-white mb-2">{activeTab.title}</h3>
-                <h4 className="text-base font-semibold text-white/50 mb-6">{activeTab.subtitle}</h4>
+                {/* Text content below image */}
+                <div className="relative z-10 flex flex-col flex-1 p-8 lg:p-10 pt-5">
+                  <h3 className="text-3xl font-extrabold text-white mb-2">{activeTab.title}</h3>
+                  <h4 className="text-base font-semibold text-white/50 mb-6">{activeTab.subtitle}</h4>
 
-                {/* Bullets List */}
-                <ul className="space-y-4 mb-8">
-                  {activeTab.bullets.map((bullet, index) => {
-                    const [title, desc] = bullet.split(": ");
-                    return (
-                      <li key={index} className="flex items-start gap-3">
-                        <div
-                          className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                          style={{ backgroundColor: `${activeTab.color}15` }}
-                        >
-                          <Check className="w-3.5 h-3.5" style={{ color: activeTab.color }} />
-                        </div>
-                        <div className="text-sm leading-relaxed text-white/60">
-                          <strong className="text-white font-semibold">{title}:</strong> {desc}
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
+                  {/* Bullets List */}
+                  <ul className="space-y-4 mb-8">
+                    {activeTab.bullets.map((bullet, index) => {
+                      const [title, desc] = bullet.split(": ");
+                      return (
+                        <li key={index} className="flex items-start gap-3">
+                          <div
+                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                            style={{ backgroundColor: `${activeTab.color}15` }}
+                          >
+                            <Check className="w-3.5 h-3.5" style={{ color: activeTab.color }} />
+                          </div>
+                          <div className="text-sm leading-relaxed text-white/60">
+                            <strong className="text-white font-semibold">{title}:</strong> {desc}
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
 
-                {/* Highlight/Metric Box */}
-                <div 
-                  className="mt-auto p-4 rounded-xl border border-white/5 flex items-center gap-3 bg-white/2"
-                >
-                  <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ backgroundColor: activeTab.color }} />
-                  <span className="text-xs font-mono uppercase tracking-wider text-white/40">Core Performance:</span>
-                  <span className="text-sm font-bold text-white ml-auto">{activeTab.highlight}</span>
+                  {/* Highlight/Metric Box */}
+                  <div className="mt-auto p-4 rounded-xl border border-white/5 flex items-center gap-3 bg-white/2">
+                    <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ backgroundColor: activeTab.color }} />
+                    <span className="text-xs font-mono uppercase tracking-wider text-white/40">Core Performance:</span>
+                    <span className="text-sm font-bold text-white ml-auto">{activeTab.highlight}</span>
+                  </div>
                 </div>
               </div>
 
