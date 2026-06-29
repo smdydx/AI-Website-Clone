@@ -87,7 +87,7 @@ export default function PagesPage() {
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Page Templates
             </span>
-            <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
+            <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               All AiSence<br />
               <span className="relative inline-block">
                 <span className="relative z-10 px-3">Templates</span>
@@ -131,7 +131,7 @@ export default function PagesPage() {
                 <span className="text-primary text-sm font-bold tracking-widest uppercase">Browse by Category</span>
                 <span className="w-8 h-px bg-primary" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white">Choose Your Template Type</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Choose Your Template Type</h2>
               <p className="text-white/50 mt-4 max-w-lg mx-auto">Every template is responsive, accessible, and ready to deploy. Customize colors, content, and layout in minutes.</p>
             </motion.div>
 

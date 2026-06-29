@@ -92,7 +92,7 @@ export default function BlogPage() {
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               Journal &amp; Insights
             </span>
-            <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
+            <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               AiSence <span className="text-accent">Blog</span>
             </h1>
             <p className="text-xl text-white/55 max-w-2xl leading-relaxed">
@@ -145,7 +145,7 @@ export default function BlogPage() {
                 </div>
                 <div className="p-10 md:p-14 bg-gradient-to-br from-[rgba(102,0,255,0.12)] to-[#07091a] flex flex-col justify-center">
                   <span className="inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 bg-primary/20 text-primary w-fit">{featured.tag}</span>
-                  <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 group-hover:text-primary transition-colors leading-tight">
+                  <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mb-4 group-hover:text-primary transition-colors leading-tight">
                     {featured.title}
                   </h2>
                   <p className="text-base text-white/60 mb-8 leading-relaxed">{featured.excerpt}</p>

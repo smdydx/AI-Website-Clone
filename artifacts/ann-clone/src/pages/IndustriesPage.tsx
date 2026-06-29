@@ -102,7 +102,7 @@ export default function IndustriesPage() {
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Industry Solutions
             </span>
-            <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
+            <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               AI Built for<br />
               <span className="text-primary">Your Industry</span>
             </h1>

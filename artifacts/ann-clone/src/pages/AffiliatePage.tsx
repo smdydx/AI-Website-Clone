@@ -180,7 +180,7 @@ export default function AffiliatePage() {
                 Earn up to 50% on every sale
               </span>
 
-              <h1 className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
+              <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
                 Join AiSence<br />
                 <span className="relative inline-block mt-2">
                   <span className="relative z-10 px-3 text-white">Affiliate</span>
@@ -303,7 +303,7 @@ export default function AffiliatePage() {
               <span className="text-[#00C8D4] text-sm font-bold tracking-widest uppercase">Powered by AI</span>
               <span className="w-8 h-px bg-[#00C8D4]" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Meet Your AI Assistant</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Meet Your AI Assistant</h2>
             <p className="text-white/50 mt-4 max-w-xl mx-auto">
               AiSence combines voice, chat, and vision AI into one powerful platform you can promote with confidence.
             </p>
@@ -503,7 +503,7 @@ export default function AffiliatePage() {
               <span className="text-accent text-sm font-bold tracking-widest uppercase">How It Works</span>
               <span className="w-8 h-px bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Steps to Become an Affiliate</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Steps to Become an Affiliate</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -559,7 +559,7 @@ export default function AffiliatePage() {
                 className="max-w-xl"
               >
                 <p className="text-accent text-sm font-bold tracking-widest uppercase mb-3">The Product You're Promoting</p>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white leading-tight mb-4">
                   AiSence — The World's Most Advanced AI Voice Agent
                 </h2>
                 <p className="text-white/60 text-base leading-relaxed mb-6">
@@ -601,7 +601,7 @@ export default function AffiliatePage() {
               <span className="text-primary text-sm font-bold tracking-widest uppercase">Why Join</span>
               <span className="w-8 h-px bg-primary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Why Affiliates Love AiSence</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Why Affiliates Love AiSence</h2>
             <p className="text-white/50 mt-4 max-w-xl mx-auto">
               We built the most generous affiliate program in AI. Because when you win, we win.
             </p>
@@ -651,7 +651,7 @@ export default function AffiliatePage() {
               <span className="text-secondary text-sm font-bold tracking-widest uppercase">Tiers</span>
               <span className="w-8 h-px bg-secondary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Affiliate Tiers</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Affiliate Tiers</h2>
             <p className="text-white/50 mt-4">The more you refer, the more we unlock for you.</p>
           </motion.div>
 
@@ -713,7 +713,7 @@ export default function AffiliatePage() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_100%_50%,rgba(0,200,212,0.06),transparent)]" />
             <div className="relative z-10">
               <p className="text-[#00C8D4] text-sm font-bold tracking-widest uppercase mb-4">Real Impact, Real Earnings</p>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mb-5 leading-tight">
                 Over 500+ affiliates already earning with AiSence
               </h2>
               <p className="text-white/55 leading-relaxed mb-8">
@@ -752,7 +752,7 @@ export default function AffiliatePage() {
               <span className="text-accent text-sm font-bold tracking-widest uppercase">FAQ</span>
               <span className="w-8 h-px bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Common Questions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Common Questions</h2>
           </motion.div>
 
           <div className="space-y-4">
@@ -796,7 +796,7 @@ export default function AffiliatePage() {
                 <div className="w-16 h-16 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center mx-auto mb-6">
                   <Gift className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-4">
                   Start Earning Today
                 </h2>
                 <p className="text-white/55 text-lg mb-8 leading-relaxed">

@@ -137,7 +137,7 @@ export default function ShopPage() {
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
               AiSence Store
             </span>
-            <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
+            <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               Shop <span className="text-secondary">Credits</span><br />&amp; Bundles
             </h1>
             <p className="text-xl text-white/55 max-w-2xl leading-relaxed">

@@ -114,7 +114,7 @@ export default function ResourcesPage() {
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Resources & Company
             </span>
-            <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
+            <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               Learn. Explore.<br />
               <span className="text-primary">Build Together.</span>
             </h1>
@@ -140,7 +140,7 @@ export default function ResourcesPage() {
                 <span className="text-primary text-sm font-bold tracking-widest uppercase">Explore</span>
                 <span className="w-8 h-px bg-primary" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white">Learning Resources</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Learning Resources</h2>
               <p className="text-white/50 mt-4 max-w-lg mx-auto">From first prompt to production deployment, we have resources for every skill level.</p>
             </motion.div>
 
@@ -196,7 +196,7 @@ export default function ResourcesPage() {
                 <span className="w-8 h-px bg-accent" />
                 <span className="text-accent text-sm font-bold tracking-widest uppercase">About Us</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
                 We're Building the Voice of AI Commerce
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
@@ -270,7 +270,7 @@ export default function ResourcesPage() {
               <span className="text-accent text-sm font-bold tracking-widest uppercase">Leadership</span>
               <span className="w-8 h-px bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Meet the Team</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Meet the Team</h2>
             <p className="text-white/50 mt-4">World-class talent from Google, DeepMind, Twilio, and beyond.</p>
           </motion.div>
 
@@ -319,7 +319,7 @@ export default function ResourcesPage() {
               <span className="text-secondary text-sm font-bold tracking-widest uppercase">Careers</span>
               <span className="w-8 h-px bg-secondary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Join AiSence Technologies</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Join AiSence Technologies</h2>
             <p className="text-white/50 mt-4 max-w-lg mx-auto">
               We're a remote-first team building category-defining products. Come help us shape the future of AI voice.
             </p>

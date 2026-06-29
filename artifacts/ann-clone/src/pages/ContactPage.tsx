@@ -88,7 +88,7 @@ export default function ContactPage() {
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Get in Touch
             </span>
-            <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
+            <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               Let's <span className="text-primary">Talk</span>
             </h1>
             <p className="text-xl text-white/55 max-w-2xl mx-auto">

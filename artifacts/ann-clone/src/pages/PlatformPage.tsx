@@ -98,7 +98,7 @@ export default function PlatformPage() {
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 The AiSence Platform
               </span>
-              <h1 className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
+              <h1 className="font-heading font-extrabold text-[1.75rem] sm:text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
                 Enterprise-Grade<br />
                 <span className="text-primary">AI Voice</span><br />
                 Infrastructure
@@ -202,7 +202,7 @@ export default function PlatformPage() {
                 <span className="text-primary text-sm font-bold tracking-widest uppercase">Core Platform</span>
                 <span className="w-8 h-px bg-primary" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white">Everything You Need to Scale</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Everything You Need to Scale</h2>
               <p className="text-white/50 mt-4 max-w-xl mx-auto">From first call to closed deal, the AiSence platform handles every step of the revenue journey.</p>
             </motion.div>
 
@@ -268,7 +268,7 @@ export default function PlatformPage() {
                 <span className="text-accent text-sm font-bold tracking-widest uppercase">Channels</span>
                 <span className="w-8 h-px bg-accent" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white">Reach Customers Everywhere</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white">Reach Customers Everywhere</h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -314,7 +314,7 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white">Full Capability Suite</h2>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white">Full Capability Suite</h2>
             <p className="text-white/50 mt-3">Everything switched on. Nothing held back.</p>
           </motion.div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
