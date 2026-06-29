@@ -29,7 +29,7 @@ const LEARN_RESOURCES = [
     icon: Cpu,
     color: "#a855f7",
     title: "Research & Technology",
-    desc: "Our technical papers, model benchmarks, and R&D updates from the AiEye AI team.",
+    desc: "Our technical papers, model benchmarks, and R&D updates from the AiSence AI team.",
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=80",
     cta: "Read Research",
   },
@@ -46,7 +46,7 @@ const TEAM_MEMBERS = [
   {
     name: "Marcus Chen",
     role: "Chief Technology Officer",
-    bio: "Ex-Google Brain engineer. Architect of the AiEye neural voice engine and real-time inference platform.",
+    bio: "Ex-Google Brain engineer. Architect of the AiSence neural voice engine and real-time inference platform.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     color: "#5EC900",
   },
@@ -119,7 +119,7 @@ export default function ResourcesPage() {
               <span className="text-primary">Build Together.</span>
             </h1>
             <p className="text-xl text-white/55 max-w-2xl leading-relaxed">
-              Everything you need to master AiEye — from beginner guides to deep technical research, and a look inside the team building the future of voice AI.
+              Everything you need to master AiSence — from beginner guides to deep technical research, and a look inside the team building the future of voice AI.
             </p>
           </motion.div>
         </div>
@@ -200,7 +200,7 @@ export default function ResourcesPage() {
                 We're Building the Voice of AI Commerce
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
-                AiEye — a product of <strong className="text-white">AiEye Technologies Private Limited</strong> — was founded in 2023 with a single mission: make enterprise-grade AI voice technology accessible to every business, regardless of size.
+                AiSence — a product of <strong className="text-white">AiSence Technologies Private Limited</strong> — was founded in 2023 with a single mission: make enterprise-grade AI voice technology accessible to every business, regardless of size.
               </p>
               <p className="text-white/60 leading-relaxed mb-8">
                 Today, we process over 10 million calls per month for businesses across 40+ countries. Our AI agents speak 28 languages, maintain perfect compliance records, and have generated over $2 billion in measurable revenue for our clients.
@@ -230,7 +230,7 @@ export default function ResourcesPage() {
               <div className="rounded-3xl overflow-hidden border border-white/10">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80"
-                  alt="AiEye Technologies team"
+                  alt="AiSence Technologies team"
                   className="w-full h-72 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050913]/60 to-transparent" />
@@ -319,7 +319,7 @@ export default function ResourcesPage() {
               <span className="text-secondary text-sm font-bold tracking-widest uppercase">Careers</span>
               <span className="w-8 h-px bg-secondary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Join AiEye Technologies</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Join AiSence Technologies</h2>
             <p className="text-white/50 mt-4 max-w-lg mx-auto">
               We're a remote-first team building category-defining products. Come help us shape the future of AI voice.
             </p>

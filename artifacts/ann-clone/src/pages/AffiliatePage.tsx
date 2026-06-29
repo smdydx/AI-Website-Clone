@@ -25,7 +25,7 @@ const STEPS = [
     icon: Users,
     color: "#6600FF",
     title: "Sign Up Free",
-    desc: "Create your AiEye affiliate account in seconds. No cost, no minimum requirements. Just your email and you're in.",
+    desc: "Create your AiSence affiliate account in seconds. No cost, no minimum requirements. Just your email and you're in.",
   },
   {
     number: "02",
@@ -38,7 +38,7 @@ const STEPS = [
     number: "03",
     icon: TrendingUp,
     color: "#EFA758",
-    title: "Promote AiEye",
+    title: "Promote AiSence",
     desc: "Share your link on social media, blogs, email lists, or anywhere your audience lives. We track every click.",
   },
   {
@@ -107,8 +107,8 @@ const FAQS = [
     a: "Absolutely not. There are no earnings caps. The more you refer, the more you earn — with no ceilings or restrictions.",
   },
   {
-    q: "Can I promote AiEye if I'm not a customer?",
-    a: "Yes! You don't need to be an AiEye customer to become an affiliate. We encourage you to try it first so you can speak authentically, but it's not required.",
+    q: "Can I promote AiSence if I'm not a customer?",
+    a: "Yes! You don't need to be an AiSence customer to become an affiliate. We encourage you to try it first so you can speak authentically, but it's not required.",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function AffiliatePage() {
               </span>
 
               <h1 className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
-                Join AiEye<br />
+                Join AiSence<br />
                 <span className="relative inline-block mt-2">
                   <span className="relative z-10 px-3 text-white">Affiliate</span>
                   <span className="absolute inset-0 bg-primary -skew-x-3 z-0 rounded-sm" />
@@ -190,7 +190,7 @@ export default function AffiliatePage() {
               </h1>
 
               <p className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg">
-                A simple and easy way to earn <strong className="text-white">50% of every sale</strong> you refer to AiEye. Earn up to{" "}
+                A simple and easy way to earn <strong className="text-white">50% of every sale</strong> you refer to AiSence. Earn up to{" "}
                 <span className="text-accent font-bold">$291</span> per referred customer — and keep earning from recurring customers as well.
               </p>
 
@@ -264,7 +264,7 @@ export default function AffiliatePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-2 left-2 right-2">
                   <p className="text-[9px] font-bold text-[#00C8D4]">CORE SYSTEM</p>
-                  <p className="text-[11px] text-white font-semibold">AiEye Engine</p>
+                  <p className="text-[11px] text-white font-semibold">AiSence Engine</p>
                 </div>
               </motion.div>
 
@@ -305,7 +305,7 @@ export default function AffiliatePage() {
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white">Meet Your AI Assistant</h2>
             <p className="text-white/50 mt-4 max-w-xl mx-auto">
-              AiEye combines voice, chat, and vision AI into one powerful platform you can promote with confidence.
+              AiSence combines voice, chat, and vision AI into one powerful platform you can promote with confidence.
             </p>
           </motion.div>
 
@@ -454,7 +454,7 @@ export default function AffiliatePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-3 right-3">
                 <p className="text-[9px] font-extrabold text-[#00C8D4] tracking-widest uppercase mb-0.5">Humanoid AI</p>
-                <p className="text-xs font-bold text-white">AiEye Engine</p>
+                <p className="text-xs font-bold text-white">AiSence Engine</p>
               </div>
             </motion.div>
 
@@ -560,7 +560,7 @@ export default function AffiliatePage() {
               >
                 <p className="text-accent text-sm font-bold tracking-widest uppercase mb-3">The Product You're Promoting</p>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
-                  AiEye — The World's Most Advanced AI Voice Agent
+                  AiSence — The World's Most Advanced AI Voice Agent
                 </h2>
                 <p className="text-white/60 text-base leading-relaxed mb-6">
                   Human-like AI that handles phone calls, books appointments, qualifies leads, and closes sales — 24/7, in any language.
@@ -601,7 +601,7 @@ export default function AffiliatePage() {
               <span className="text-primary text-sm font-bold tracking-widest uppercase">Why Join</span>
               <span className="w-8 h-px bg-primary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Why Affiliates Love AiEye</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">Why Affiliates Love AiSence</h2>
             <p className="text-white/50 mt-4 max-w-xl mx-auto">
               We built the most generous affiliate program in AI. Because when you win, we win.
             </p>
@@ -714,10 +714,10 @@ export default function AffiliatePage() {
             <div className="relative z-10">
               <p className="text-[#00C8D4] text-sm font-bold tracking-widest uppercase mb-4">Real Impact, Real Earnings</p>
               <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 leading-tight">
-                Over 500+ affiliates already earning with AiEye
+                Over 500+ affiliates already earning with AiSence
               </h2>
               <p className="text-white/55 leading-relaxed mb-8">
-                Our affiliates span bloggers, marketers, agency owners, and coaches. Anyone with an audience can earn significant recurring income promoting AiEye.
+                Our affiliates span bloggers, marketers, agency owners, and coaches. Anyone with an audience can earn significant recurring income promoting AiSence.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -800,7 +800,7 @@ export default function AffiliatePage() {
                   Start Earning Today
                 </h2>
                 <p className="text-white/55 text-lg mb-8 leading-relaxed">
-                  Join hundreds of affiliates already earning with AiEye. Sign up in 60 seconds and get your first commission within days.
+                  Join hundreds of affiliates already earning with AiSence. Sign up in 60 seconds and get your first commission within days.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <motion.button

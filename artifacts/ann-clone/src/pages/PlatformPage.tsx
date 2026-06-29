@@ -96,7 +96,7 @@ export default function PlatformPage() {
             >
               <span className="inline-flex items-center gap-2 text-sm font-bold text-primary border border-primary/30 rounded-full px-4 py-1.5 mb-8 bg-primary/5">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                The AiEye Platform
+                The AiSence Platform
               </span>
               <h1 className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-white mb-6">
                 Enterprise-Grade<br />
@@ -203,7 +203,7 @@ export default function PlatformPage() {
                 <span className="w-8 h-px bg-primary" />
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-white">Everything You Need to Scale</h2>
-              <p className="text-white/50 mt-4 max-w-xl mx-auto">From first call to closed deal, the AiEye platform handles every step of the revenue journey.</p>
+              <p className="text-white/50 mt-4 max-w-xl mx-auto">From first call to closed deal, the AiSence platform handles every step of the revenue journey.</p>
             </motion.div>
 
             <div className="space-y-8">

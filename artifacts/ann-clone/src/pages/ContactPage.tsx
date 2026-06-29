@@ -46,19 +46,19 @@ const CONTACT_CARDS = [
 const OFFICES = [
   {
     city: "Mumbai",
-    address: "AiEye Technologies Pvt. Ltd.\nBandra Kurla Complex, Mumbai - 400051",
+    address: "AiSence Technologies Pvt. Ltd.\nBandra Kurla Complex, Mumbai - 400051",
     timezone: "IST (UTC+5:30)",
     phone: "+91 22 4012 3456",
   },
   {
     city: "San Francisco",
-    address: "AiEye Global HQ\n101 Mission Street, SF, CA 94105",
+    address: "AiSence Global HQ\n101 Mission Street, SF, CA 94105",
     timezone: "PST (UTC-8)",
     phone: "+1 (415) 820-9800",
   },
   {
     city: "London",
-    address: "AiEye EU Operations\n1 Canada Square, London E14 5AB",
+    address: "AiSence EU Operations\n1 Canada Square, London E14 5AB",
     timezone: "GMT (UTC+0)",
     phone: "+44 20 7946 0800",
   },
@@ -82,7 +82,7 @@ export default function ContactPage() {
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}>
             <div className="flex items-center justify-center gap-1.5 mb-4">
               <Building2 className="w-4 h-4 text-primary/60" />
-              <span className="text-sm text-primary/60 font-semibold">AiEye Technologies Private Limited</span>
+              <span className="text-sm text-primary/60 font-semibold">AiSence Technologies Private Limited</span>
             </div>
             <span className="inline-flex items-center gap-2 text-sm font-bold text-primary border border-primary/30 rounded-full px-4 py-1.5 mb-8 bg-primary/5">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -250,7 +250,7 @@ export default function ContactPage() {
                 <div className="relative rounded-2xl overflow-hidden h-48">
                   <img
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80"
-                    alt="AiEye Technologies office"
+                    alt="AiSence Technologies office"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-[#07091a]/50" />
@@ -258,7 +258,7 @@ export default function ContactPage() {
                   <div className="absolute bottom-5 left-6">
                     <div className="flex items-center gap-2 mb-1">
                       <Building2 className="w-4 h-4 text-primary" />
-                      <span className="text-white font-bold text-sm">AiEye Technologies Private Limited</span>
+                      <span className="text-white font-bold text-sm">AiSence Technologies Private Limited</span>
                     </div>
                     <span className="text-white/50 text-xs">Global offices across India, US & UK</span>
                   </div>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                   <div className="flex gap-3">
                     {[
                       { icon: Twitter, label: "@annai", color: "#1DA1F2" },
-                      { icon: Linkedin, label: "AiEye Technologies", color: "#0A66C2" },
+                      { icon: Linkedin, label: "AiSence Technologies", color: "#0A66C2" },
                       { icon: MessageSquare, label: "Discord", color: "#5865F2" },
                     ].map((s) => (
                       <a

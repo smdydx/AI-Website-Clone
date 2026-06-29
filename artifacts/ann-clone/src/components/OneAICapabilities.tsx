@@ -114,7 +114,7 @@ function PhoneDialer() {
     <div className="w-full h-full flex flex-col bg-[#050614] text-white p-5 justify-between relative font-sans pt-10">
       <div className="text-center">
         <span className="text-[10px] uppercase font-bold tracking-widest text-[#5EC900] bg-[#5EC900]/10 border border-[#5EC900]/20 px-2 py-0.5 rounded-full">
-          AiEye Outbound Core
+          AiSence Outbound Core
         </span>
         <h5 className="text-sm font-bold text-white/50 mt-4">Calling Lead</h5>
         <h4 className="text-lg font-bold text-white mt-1">+1 (415) 555-0199</h4>
@@ -187,7 +187,7 @@ function PhoneWorkforce() {
 
   useEffect(() => {
     const sequence = [
-      { role: "ai", text: "Hello! I am AXON, AiEye's AI voice agent. Am I speaking with Sarah?" },
+      { role: "ai", text: "Hello! I am AXON, AiSence's AI voice agent. Am I speaking with Sarah?" },
       { role: "user", text: "Yes! This is Sarah." },
       { role: "ai", text: "Great! I saw you requested info on scaling outbound calls..." },
       { role: "user", text: "Yes, we need to dial 500 leads daily." },

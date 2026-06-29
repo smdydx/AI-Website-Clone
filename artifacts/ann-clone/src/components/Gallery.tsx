@@ -13,17 +13,17 @@ const IMAGES = [
   { 
     src: imgInbox, 
     alt: "Email Management",
-    desc: "AiEye automatically categorizes incoming emails, drafts context-aware responses, and flags high-priority items so you can achieve inbox zero effortlessly."
+    desc: "AiSence automatically categorizes incoming emails, drafts context-aware responses, and flags high-priority items so you can achieve inbox zero effortlessly."
   },
   { 
     src: imgScheduling, 
     alt: "Meeting Scheduler",
-    desc: "Coordinate calendars, analyze availability, and schedule meetings automatically. AiEye finds the optimal time slot and handles invitations for your team."
+    desc: "Coordinate calendars, analyze availability, and schedule meetings automatically. AiSence finds the optimal time slot and handles invitations for your team."
   },
   { 
     src: imgTasks, 
     alt: "Smart Reminders",
-    desc: "Never miss a deadline. AiEye monitors your active projects, sets intelligent reminders, and sends proactive notifications based on real-time task progress."
+    desc: "Never miss a deadline. AiSence monitors your active projects, sets intelligent reminders, and sends proactive notifications based on real-time task progress."
   },
   { 
     src: imgInsights, 
@@ -186,7 +186,7 @@ export function Gallery() {
                 transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="text-2xl md:text-3xl font-extrabold text-white"
               >
-                Powered by <span className="text-primary">AiEye</span>
+                Powered by <span className="text-primary">AiSence</span>
               </motion.h2>
             </div>
           </div>
@@ -322,7 +322,7 @@ export function Gallery() {
             </div>
 
             <h2 className="text-3xl font-extrabold mb-2 text-white">
-              Powered by <span className="text-primary">AiEye</span>
+              Powered by <span className="text-primary">AiSence</span>
             </h2>
             <p className="text-sm text-white/55 leading-relaxed max-w-sm">
               Discover how our AI assistant transforms your daily workflow and boosts productivity.

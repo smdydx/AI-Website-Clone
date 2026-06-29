@@ -188,8 +188,8 @@ export function Navbar() {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 z-10">
             <img
-              src="/aieye-logo.svg"
-              alt="AiEye Technologies"
+              src="/aisence-logo.svg"
+              alt="AiSence Technologies"
               className="h-10 w-auto object-contain"
             />
           </Link>

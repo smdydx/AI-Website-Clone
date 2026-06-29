@@ -60,7 +60,7 @@ export function CTA() {
           transition={{ delay: 0.25, duration: 0.7 }}
           className="text-xl text-white/70 max-w-2xl mx-auto mb-14 leading-relaxed"
         >
-          Join thousands of businesses and teams already using AiEye to automate
+          Join thousands of businesses and teams already using AiSence to automate
           and scale their voice operations.
         </motion.p>
 
@@ -138,13 +138,13 @@ export function Footer() {
             className="md:col-span-1"
           >
             <img
-              src="/aieye-logo.svg"
-              alt="AiEye Technologies"
+              src="/aisence-logo.svg"
+              alt="AiSence Technologies"
               className="h-12 w-auto object-contain mb-3"
             />
             <div className="flex items-center gap-1.5 mb-5">
               <Building2 className="w-3.5 h-3.5 text-primary/70" />
-              <span className="text-xs text-primary/70 font-semibold">AiEye Technologies Private Limited</span>
+              <span className="text-xs text-primary/70 font-semibold">AiSence Technologies Private Limited</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               The premium AI Voice Agent platform for modern businesses and scale campaigns.
@@ -191,11 +191,11 @@ export function Footer() {
           className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/30"
         >
           <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
-            <p>© {new Date().getFullYear()} AiEye. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} AiSence. All rights reserved.</p>
             <span className="hidden sm:block text-white/15">•</span>
             <p className="text-white/20 text-xs flex items-center gap-1">
               <Building2 className="w-3 h-3" />
-              AiEye Technologies Private Limited
+              AiSence Technologies Private Limited
             </p>
           </div>
           <div className="flex gap-6">

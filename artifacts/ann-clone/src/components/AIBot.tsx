@@ -8,19 +8,19 @@ interface Message {
 }
 
 const BOT_RESPONSES: Record<string, string> = {
-  hello: "Hey there! I'm AXON, AiEye's AI assistant. I can help you explore our AI Voice Agent platform. What would you like to know?",
-  hi: "Hi! I'm AXON. Ask me anything about AiEye's AI Voice Agents!",
+  hello: "Hey there! I'm AXON, AiSence's AI assistant. I can help you explore our AI Voice Agent platform. What would you like to know?",
+  hi: "Hi! I'm AXON. Ask me anything about AiSence's AI Voice Agents!",
   pricing: "We have 3 plans: Starter (500 calls/month), Pro at $299/mo (unlimited + warm transfers), and Enterprise (custom pricing + API). Which one interests you?",
-  features: "AiEye offers AI-powered outbound & inbound calling, lead qualification, warm call transfers, CRM sync, and A/B script testing.",
-  how: "Set up your campaign → Configure your AI voice agent → Upload leads → Launch calls. AiEye handles qualification and transfers automatically!",
+  features: "AiSence offers AI-powered outbound & inbound calling, lead qualification, warm call transfers, CRM sync, and A/B script testing.",
+  how: "Set up your campaign → Configure your AI voice agent → Upload leads → Launch calls. AiSence handles qualification and transfers automatically!",
   start: "Click 'Get Started' in the header to schedule a demo. Our team will set up your first campaign!",
-  quality: "AiEye's AI voices have near-zero latency (<500ms) and sound completely human. Trained for natural sales conversations.",
+  quality: "AiSence's AI voices have near-zero latency (<500ms) and sound completely human. Trained for natural sales conversations.",
   style: "Multiple voice options available — different accents, tones, and speaking styles optimized for your industry.",
   api: "Yes! Our Enterprise plan includes full REST API access, webhooks, and CRM integrations. Perfect for scaling teams.",
-  blog: "Check out our Blog page for case studies, conversion tips, and the latest AiEye platform updates!",
+  blog: "Check out our Blog page for case studies, conversion tips, and the latest AiSence platform updates!",
   shop: "Visit our Shop page to explore AI agent templates, custom voice packs, and campaign add-ons.",
   contact: "You can reach us via the Contacts page — email, phone, or just use me, AXON, for instant answers!",
-  default: "Great question! AiEye's AI voice agents automate your phone campaigns and boost conversions. Want to know about pricing, features, or how to get started?",
+  default: "Great question! AiSence's AI voice agents automate your phone campaigns and boost conversions. Want to know about pricing, features, or how to get started?",
 };
 
 function getBotResponse(input: string): string {
@@ -31,7 +31,7 @@ function getBotResponse(input: string): string {
   return BOT_RESPONSES.default;
 }
 
-const SUGGESTIONS = ["What can AiEye do?", "Pricing plans?", "How do I start?", "Book a demo"];
+const SUGGESTIONS = ["What can AiSence do?", "Pricing plans?", "How do I start?", "Book a demo"];
 
 const RobotFace = ({ isThinking }: { isThinking: boolean }) => (
   <div className="relative w-full h-full flex items-center justify-center">
@@ -68,7 +68,7 @@ const RobotFace = ({ isThinking }: { isThinking: boolean }) => (
 export function AIBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "bot", text: "Hey! I'm AXON — AiEye's AI assistant. Ask me anything!" },
+    { role: "bot", text: "Hey! I'm AXON — AiSence's AI assistant. Ask me anything!" },
   ]);
   const [input, setInput] = useState("");
   const [thinking, setThinking] = useState(false);
@@ -125,7 +125,7 @@ export function AIBot() {
                 <p className="font-bold text-white text-sm">AXON</p>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                  <p className="text-xs text-white/50">AiEye AI Assistant</p>
+                  <p className="text-xs text-white/50">AiSence AI Assistant</p>
                 </div>
               </div>
               <button onClick={() => setOpen(false)} className="text-white/40 hover:text-white transition-colors">

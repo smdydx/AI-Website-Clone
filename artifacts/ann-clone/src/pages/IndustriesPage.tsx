@@ -107,7 +107,7 @@ export default function IndustriesPage() {
               <span className="text-primary">Your Industry</span>
             </h1>
             <p className="text-xl text-white/55 max-w-2xl leading-relaxed">
-              Every industry has unique needs. AiEye delivers tailored AI voice solutions with industry-specific compliance, integrations, and best practices built in.
+              Every industry has unique needs. AiSence delivers tailored AI voice solutions with industry-specific compliance, integrations, and best practices built in.
             </p>
           </motion.div>
 

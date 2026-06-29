@@ -135,7 +135,7 @@ export default function ShopPage() {
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}>
             <span className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 rounded-full px-4 py-1.5 mb-8 bg-secondary/5">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              AiEye Store
+              AiSence Store
             </span>
             <h1 className="font-heading font-extrabold text-5xl md:text-7xl lg:text-8xl leading-tight tracking-tighter text-white mb-6">
               Shop <span className="text-secondary">Credits</span><br />&amp; Bundles
