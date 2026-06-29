@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { SectionDoor } from "@/components/SectionDoor";
 import { Navbar } from "@/components/Navbar";
@@ -96,6 +97,11 @@ const COMPANY_VALUES = [
 ];
 
 export default function ResourcesPage() {
+  useEffect(() => {
+    document.title = "Resources | AiSence - Guides, Docs & Team";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "Access learning resources, documentation, research, and meet the AiSence team.");
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

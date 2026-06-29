@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { SectionDoor } from "@/components/SectionDoor";
 import { Navbar } from "@/components/Navbar";
@@ -77,6 +78,11 @@ const POSTS = [
 const CATEGORIES = ["All", "Technical", "Tutorial", "Legal", "Tips", "Opinion", "Release"];
 
 export default function BlogPage() {
+  useEffect(() => {
+    document.title = "Blog | AiSence - AI Insights & Updates";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "Latest news, case studies, and AI voice agent insights from the AiSence team.");
+  }, []);
   const [featured, ...rest] = POSTS;
 
   return (

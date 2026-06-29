@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { SectionDoor } from "@/components/SectionDoor";
 import { Navbar } from "@/components/Navbar";
@@ -67,6 +67,11 @@ const OFFICES = [
 const TOPICS = ["General Inquiry", "Sales / Pricing", "Technical Support", "Partnership", "Press & Media", "Careers"];
 
 export default function ContactPage() {
+  useEffect(() => {
+    document.title = "Contact | AiSence - Talk to Our Team";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "Get in touch with AiSence. Reach our sales and support team via form, phone, or email.");
+  }, []);
   const [sent, setSent] = useState(false);
   const [topic, setTopic] = useState(TOPICS[0]);
 

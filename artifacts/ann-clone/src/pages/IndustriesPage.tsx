@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { SectionDoor } from "@/components/SectionDoor";
 import { Navbar } from "@/components/Navbar";
@@ -83,6 +84,11 @@ const INDUSTRIES = [
 ];
 
 export default function IndustriesPage() {
+  useEffect(() => {
+    document.title = "Industries | AiSence - AI for Every Sector";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "AiSence serves real estate, healthcare, finance, insurance, e-commerce and more with intelligent AI voice agents.");
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

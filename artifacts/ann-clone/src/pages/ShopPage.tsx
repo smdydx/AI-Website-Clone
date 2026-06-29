@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionDoor } from "@/components/SectionDoor";
@@ -124,6 +125,11 @@ function AddToCartButton({ product }: { product: typeof PRODUCTS[number] }) {
 }
 
 export default function ShopPage() {
+  useEffect(() => {
+    document.title = "Shop | AiSence - AI Templates & Voice Packs";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "Browse AiSence AI agent templates, custom voices, and automation packs for your business.");
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

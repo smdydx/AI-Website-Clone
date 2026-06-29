@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { SectionDoor } from "@/components/SectionDoor";
 import { Navbar } from "@/components/Navbar";
@@ -79,6 +80,11 @@ const CAPABILITIES = [
 ];
 
 export default function PlatformPage() {
+  useEffect(() => {
+    document.title = "Platform | AiSence - AI Voice Agent Technology";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "Explore AiSence platform features: AI-native dialer, phone campaigns, analytics, and CRM integrations.");
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -147,6 +148,11 @@ const GALLERY_IMAGES = [
 ];
 
 export default function AffiliatePage() {
+  useEffect(() => {
+    document.title = "Affiliate Program | AiSence - Earn 50% Commission";
+    const m = document.querySelector("meta[name=description]");
+    if (m) m.setAttribute("content", "Join the AiSence affiliate program and earn 50% recurring commission on every sale. Get your link today.");
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

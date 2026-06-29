@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
+import { Link } from "wouter";
 import { ParticleBackground } from "./ParticleBackground";
 import { MobileSwipeContainer } from "./MobileSwipeContainer";
 import cyber1 from "@assets/hero-cyber-1.png";
@@ -195,10 +196,18 @@ export function Hero() {
             transition={{ delay: 0.98, duration: 0.6 }}
             className="mt-6 md:mt-10 flex items-center gap-3 md:gap-5 flex-wrap"
           >
-            <button className="px-6 py-3 md:px-8 md:py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(102,0,255,0.5)] text-sm md:text-base">
-              Try It Free
-            </button>
-            <button className="px-6 py-3 md:px-8 md:py-4 border border-white/20 hover:border-white/50 text-white font-medium rounded-full transition-all duration-300 hover:bg-white/5 text-sm md:text-base">
+            <Link href="/contacts">
+              <button className="px-6 py-3 md:px-8 md:py-4 bg-primary hover:bg-primary/85 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(102,0,255,0.5)] text-sm md:text-base">
+                Try It Free
+              </button>
+            </Link>
+            <button
+              onClick={() => {
+                const el = document.querySelector("[data-section='how']") || Array.from(document.querySelectorAll("h2")).find(h => h.textContent?.toLowerCase().includes("how it works"));
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="px-6 py-3 md:px-8 md:py-4 border border-white/20 hover:border-white/50 text-white font-medium rounded-full transition-all duration-300 hover:bg-white/5 text-sm md:text-base"
+            >
               See How It Works
             </button>
           </motion.div>

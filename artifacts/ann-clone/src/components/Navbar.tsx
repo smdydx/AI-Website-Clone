@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import { Link, useLocation, useRouter } from "wouter";
 import { useCart } from "@/context/CartContext";
 import { 
   ShoppingCart, 
@@ -147,7 +147,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [location, setLocation] = useLocation();
+  const [location, navigate] = useLocation();
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const [mobileDropdowns, setMobileDropdowns] = useState<Record<number, boolean>>({});
 
@@ -159,10 +159,21 @@ export function Navbar() {
   };
 
   const handleSearchClick = (targetText: string) => {
-    const elements = Array.from(document.querySelectorAll("h2, h1, span, section"));
-    const match = elements.find(el => el.textContent?.toLowerCase().includes(targetText.toLowerCase()));
-    if (match) {
-      match.scrollIntoView({ behavior: "smooth", block: "center" });
+    const doScroll = () => {
+      setTimeout(() => {
+        const elements = Array.from(document.querySelectorAll("h2, h1, span, section, [data-section]"));
+        const match = elements.find(el => el.textContent?.toLowerCase().includes(targetText.toLowerCase()));
+        if (match) match.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 350);
+    };
+    setSearchOpen(false);
+    setActiveDropdown(null);
+    setMobileOpen(false);
+    if (location !== "/") {
+      navigate("/");
+      doScroll();
+    } else {
+      doScroll();
     }
   };
 
@@ -320,29 +331,25 @@ export function Navbar() {
                           >
                             <div className="flex items-center justify-between border-b border-white/5 pb-2">
                               <span className="text-[10px] font-bold text-white/40 uppercase tracking-wider">Phone AI Solutions by Industry</span>
-                              <button
-                                onClick={() => {
-                                  handleSearchClick("OneAIUseCases");
-                                  setActiveDropdown(null);
-                                }}
+                              <Link
+                                href="/industries"
+                                onClick={() => setActiveDropdown(null)}
                                 className="text-[10px] font-bold text-primary hover:text-primary-hover transition-colors"
                               >
                                 See all industries →
-                              </button>
+                              </Link>
                             </div>
                             <div className="grid grid-cols-2 gap-2">
                               {link.dropdown.map((subItem: any) => (
-                                <button
+                                <Link
                                   key={subItem.label}
-                                  onClick={() => {
-                                    handleSearchClick("OneAIUseCases");
-                                    setActiveDropdown(null);
-                                  }}
+                                  href="/industries"
+                                  onClick={() => setActiveDropdown(null)}
                                   className="text-left w-full text-xs text-white/70 hover:text-white hover:bg-white/5 px-3 py-2.5 rounded-xl transition-all font-semibold flex items-center gap-3 group/ind"
                                 >
                                   {subItem.icon && <subItem.icon className={`w-4 h-4 shrink-0 transition-transform group-hover/ind:scale-110 ${subItem.iconColor}`} />}
                                   <span className="text-[13px]">{subItem.label}</span>
-                                </button>
+                                </Link>
                               ))}
                             </div>
                           </motion.div>
@@ -627,17 +634,15 @@ export function Navbar() {
                           {link.dropdownType === "mega-industries" && (
                             <div className="grid grid-cols-2 gap-1.5">
                               {link.dropdown.map((subItem: any) => (
-                                <button
+                                <Link
                                   key={subItem.label}
-                                  onClick={() => {
-                                    handleSearchClick("OneAIUseCases");
-                                    setMobileOpen(false);
-                                  }}
+                                  href="/industries"
+                                  onClick={() => setMobileOpen(false)}
                                   className="py-2 px-2.5 rounded-lg text-xs text-white/60 hover:text-white hover:bg-white/5 transition-colors text-left flex items-center gap-2"
                                 >
                                   {subItem.icon && <subItem.icon className={`w-3.5 h-3.5 ${subItem.iconColor}`} />}
                                   <span>{subItem.label}</span>
-                                </button>
+                                </Link>
                               ))}
                             </div>
                           )}
