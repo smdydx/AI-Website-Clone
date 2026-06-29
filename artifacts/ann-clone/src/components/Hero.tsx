@@ -13,6 +13,100 @@ import cyber6 from "@assets/hero-cyber-6.png";
 
 const WORDS = ["Future", "Revolution", "Evolution", "Companion"];
 
+const TERMINAL_LINES = [
+  { text: "$ aisence.init(neural_core)", color: "#5EC900" },
+  { text: "> model: GPT-4o [LOADED]", color: "#00C8D4" },
+  { text: "$ voice.stream(realtime=true)", color: "#5EC900" },
+  { text: "> latency: 94ms ✓", color: "#6600FF" },
+  { text: "$ agent.deploy(scope='global')", color: "#5EC900" },
+  { text: "> 0xFF neural paths active", color: "#00C8D4" },
+  { text: "$ pipeline.run(mode='auto')", color: "#5EC900" },
+  { text: "> accuracy: 99.3% [OK]", color: "#EFA758" },
+  { text: "$ call.route(ai=true, cid=+1…)", color: "#5EC900" },
+  { text: "> handoff: READY", color: "#6600FF" },
+];
+
+function AITerminal() {
+  const [lines, setLines] = useState<{ text: string; color: string; id: number }[]>([]);
+  const idRef = useRef(0);
+  const indexRef = useRef(0);
+
+  useEffect(() => {
+    // Seed first 3 lines immediately
+    const seed = TERMINAL_LINES.slice(0, 3).map((l) => ({ ...l, id: idRef.current++ }));
+    setLines(seed);
+    indexRef.current = 3;
+
+    const iv = setInterval(() => {
+      const next = TERMINAL_LINES[indexRef.current % TERMINAL_LINES.length];
+      indexRef.current++;
+      setLines((prev) => {
+        const updated = [...prev, { ...next, id: idRef.current++ }];
+        return updated.length > 5 ? updated.slice(-5) : updated;
+      });
+    }, 1400);
+    return () => clearInterval(iv);
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24, scale: 0.96 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ delay: 1.6, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      className="hidden xl:block absolute bottom-8 left-0 w-[310px] z-10"
+      style={{ backdropFilter: "blur(16px)" }}
+    >
+      <div
+        className="rounded-xl border border-white/10 overflow-hidden"
+        style={{
+          background: "rgba(5,9,19,0.82)",
+          boxShadow: "0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(102,0,255,0.15), inset 0 1px 0 rgba(255,255,255,0.04)",
+        }}
+      >
+        {/* Title bar */}
+        <div className="flex items-center gap-2 px-3 py-2 border-b border-white/8 bg-white/[0.02]">
+          <span className="w-2 h-2 rounded-full bg-red-500/70" />
+          <span className="w-2 h-2 rounded-full bg-yellow-500/70" />
+          <span className="w-2 h-2 rounded-full bg-green-500/70" />
+          <span className="text-white/30 text-[10px] font-mono ml-2">aisence_runtime.sh</span>
+          <span className="ml-auto flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            <span className="text-accent text-[9px] font-bold uppercase tracking-wider">LIVE</span>
+          </span>
+        </div>
+        {/* Lines */}
+        <div className="px-3 py-2.5 space-y-1 min-h-[108px]">
+          <AnimatePresence initial={false}>
+            {lines.map((line) => (
+              <motion.p
+                key={line.id}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="text-[10px] font-mono leading-tight truncate"
+                style={{ color: line.color }}
+              >
+                {line.text}
+              </motion.p>
+            ))}
+          </AnimatePresence>
+        </div>
+        {/* Input row */}
+        <div className="px-3 py-2 border-t border-white/8 flex items-center gap-2">
+          <span className="text-accent text-[10px] font-mono">▸</span>
+          <span className="text-white/20 text-[10px] font-mono">processing</span>
+          <motion.span
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 0.9, repeat: Infinity }}
+            className="w-1.5 h-3 bg-accent/60 inline-block"
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 const STRIP_IMAGES = [
   { src: cyber1, label: "AiSence Engine", sub: "Core System", color: "#5EC900" },
   { src: cyber2, label: "Neural Space", sub: "AI Network", color: "#EFA758" },
@@ -133,6 +227,9 @@ export function Hero() {
       {/* Ambient blobs */}
       <div className="absolute top-1/4 left-1/6 w-[480px] h-[480px] bg-primary/10 rounded-full blur-[140px] pointer-events-none" style={{ zIndex: 1 }} />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[400px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" style={{ zIndex: 1 }} />
+
+      {/* Floating AI terminal — desktop only */}
+      <AITerminal />
 
       <div className="container mx-auto px-6 flex items-center gap-8 relative" style={{ zIndex: 2 }}>
 
