@@ -43,7 +43,6 @@ function SectionFallback() {
 function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-white relative overflow-x-hidden">
-      <ParticleBackground />
       <Navbar />
       <Suspense fallback={null}>
         <TorchLight />
@@ -155,6 +154,7 @@ function App() {
       <TooltipProvider>
         <CartProvider>
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <ParticleBackground />
             <Router />
           </WouterRouter>
           <Toaster />
